@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "devStart": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,5 +18,8 @@
     "nodemon": "^2.0.15",
     "sqlite": "^4.0.23",
     "sqlite3": "^5.0.2"
+  },
+  "engines": {
+    "node": "12.18.3"
   }
 }

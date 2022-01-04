@@ -12,7 +12,6 @@ const sqlite3 = require("sqlite3");
 const dbPath = path.join(__dirname, "entriesData.db");
 
 const app = express();
-const port = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(cors());
@@ -20,15 +19,13 @@ app.use(upload());
 
 let db = null;
 
-const data = require("./data");
-
 const initializeDbAndServer = async () => {
   try {
     db = await open({
       filename: dbPath,
       driver: sqlite3.Database,
     });
-    app.listen(port, () => {
+    app.listen(process.env.PORT || 3001, () => {
       console.log("server is running at https://localhost:3001/");
     });
   } catch (e) {
