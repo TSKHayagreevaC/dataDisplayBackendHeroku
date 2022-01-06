@@ -59,7 +59,7 @@ app.post("/register/", async (req, res) => {
     res.status(400);
     res.json({
       message:
-        "This Member Is Already Registered...Try With Different Username...",
+        "This Member Is Already Registered...Try With Different Username Or Login With This Username...",
     });
   } else {
     const dbAddMemberQuery = `
